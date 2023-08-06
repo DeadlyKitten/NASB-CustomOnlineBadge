@@ -15,7 +15,7 @@ namespace CustomOnlineBadge.Patches
 
             var avatar = ___playerInformation.Avatar;
 
-            if (onlineMatchInfoList.currUser.IsLocal)
+            if (onlineMatchInfoList.currUser.IsLocal && BadgePlugin.LocalPlayerBadge)
             {
                 BadgePlugin.LogDebug("VersusPlayerSlot.Setup: Setting badge for local player");
                 SetBadge(avatar, BadgePlugin.LocalPlayerBadge);

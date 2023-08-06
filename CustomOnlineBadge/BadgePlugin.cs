@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace CustomOnlineBadge
 {
-    [BepInPlugin("com.steven.nasb.custombadge", "Custom Online Badge", "1.0.1")]
+    [BepInPlugin("com.steven.nasb.custombadge", "Custom Online Badge", "1.0.2")]
     public class BadgePlugin : BaseUnityPlugin
     {
         internal static BadgePlugin Instance { get; private set; }
