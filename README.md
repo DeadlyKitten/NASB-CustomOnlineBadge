@@ -22,7 +22,7 @@ You can customize the mod's behavior by editing `BepInEx/config/com.steven.nasb.
 - `Share Custom Badge`: Set this to false if you don't want your custom badge to be shared online with other players.
 - `Download Custom Badges`: Set this to true to view other players' custom badges. (enable this **AT YOUR OWN RISK**.)
 
+----
 
-
-## Disclaimer
+### Disclaimer
 There is nothing in place to prevent people from using inappropriate images as their custom badge. It is highly recommended to leave the `Download Custom Badges` setting off if you're livestreaming.
