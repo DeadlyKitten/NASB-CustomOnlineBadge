@@ -6,37 +6,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="CustomOnlineBadge.csproj.user" Condition="Exists('CustomOnlineBadge.csproj.user')" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\core\0Harmony.dll</HintPath>
+      <HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="SlimeModdingUtilities">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\plugins\SlimeModdingUtilities.dll</HintPath>
+      <HintPath>$(GameDir)\BepInEx\plugins\SlimeModdingUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(GameDir)\Launcher Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;C:\Program Files\Steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\plugins&quot;" />
+    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(GameDir)\BepInEx\plugins&quot;" />
   </Target>
 
 </Project>
